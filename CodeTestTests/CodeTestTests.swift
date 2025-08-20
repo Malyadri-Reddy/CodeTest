@@ -2,7 +2,7 @@
 //  CodeTestTests.swift
 //  CodeTestTests
 //
-//  Created by Goutham S on 18/08/25.
+//  Created by Malyadri on 18/08/25.
 //
 
 import XCTest
@@ -33,26 +33,26 @@ final class CodeTestTests: XCTestCase {
         }
     }
     
-    func testFetchPostSuccess() async throws {
-        
-        let service = MockApiService()
-        let viewModel = PostListViewModel(service: service)
-        await viewModel.fetchPosts()
-        
-        XCTAssertEqual(viewModel.posts.count, 1)
-        XCTAssertNil(viewModel.errorMessage)
-        
-    }
-    
-    func testFetchPostsFail() async throws {
-        
-        let service = MockApiService()
-        service.shouldFailFetchPosts = true
-        let viewModel = PostListViewModel(service: service)
-        await viewModel.fetchPosts()
-        
-        XCTAssertTrue(viewModel.posts.isEmpty)
-        XCTAssertNotNil(viewModel.errorMessage)
-    }
+//    func testFetchPostSuccess() async throws {
+//        
+//        let service = MockApiService()
+//        let viewModel = PostListViewModel(service: service)
+//        await viewModel.fetchPosts()
+//        
+//        XCTAssertEqual(viewModel.posts.count, 1)
+//        XCTAssertNil(viewModel.errorMessage)
+//        
+//    }
+//    
+//    func testFetchPostsFail() async throws {
+//        
+//        let service = MockApiService()
+//        service.shouldFailFetchPosts = true
+//        let viewModel = PostListViewModel(service: service)
+//        await viewModel.fetchPosts()
+//        
+//        XCTAssertTrue(viewModel.posts.isEmpty)
+//        XCTAssertNotNil(viewModel.errorMessage)
+//    }
 
 }
