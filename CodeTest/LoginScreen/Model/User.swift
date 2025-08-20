@@ -5,7 +5,7 @@
 //  Created by Malyadri on 20/08/25.
 //
 
-struct User {
+struct User: Codable {
     let username: String
     let password: String
 }
